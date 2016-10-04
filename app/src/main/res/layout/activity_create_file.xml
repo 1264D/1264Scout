@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.a1264d.a1264scout.CreateFile">
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/createScroll"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:id="@+id/robotPicture"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:clickable="true" />
+
+            <EditText
+                android:layout_width="180dp"
+                android:layout_height="45dp"
+                android:id="@+id/TeamNumber"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:hint="@string/inputTeamName"
+                android:clickable="true"
+                android:textAlignment="center"
+                android:inputType="textCapCharacters"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColorHighlight="?attr/colorPrimary"
+                android:maxLength="5" />
+
+            <EditText
+                android:layout_width="180dp"
+                android:layout_height="45dp"
+                android:id="@+id/DriveType"
+                android:hint="@string/drive_type"
+                android:textAlignment="center"
+                android:inputType="text"
+                android:layout_below="@+id/TeamNumber"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColorHighlight="?attr/colorPrimary"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stars"
+                android:id="@+id/starCheck"
+                android:checked="true"
+                android:layout_below="@+id/robotPicture"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="20sp"
+                android:singleLine="true"
+                android:buttonTint="?attr/colorPrimary" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cubes"
+                android:id="@+id/cubeCheck"
+                android:checked="true"
+                android:textSize="20sp"
+                android:singleLine="true"
+                android:buttonTint="?attr/colorPrimary"
+                android:layout_above="@+id/cubeCapa"
+                android:layout_alignLeft="@+id/DriveType"
+                android:layout_alignStart="@+id/DriveType"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/starCapa"
+                android:textAlignment="center"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColorHighlight="?attr/colorPrimary"
+                android:layout_below="@+id/starCheck"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/starCheck"
+                android:layout_alignEnd="@+id/starCheck"
+                android:hint="@string/capacity"
+                android:maxLength="2"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/cubeCapa"
+                android:layout_alignBottom="@+id/starCapa"
+                android:layout_alignRight="@+id/cubeCheck"
+                android:layout_alignEnd="@+id/cubeCheck"
+                android:layout_alignLeft="@+id/cubeCheck"
+                android:layout_alignStart="@+id/cubeCheck"
+                android:textAlignment="center"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColorHighlight="?attr/colorPrimary"
+                android:hint="@string/capacity"
+                android:maxLength="2"/>
+
+            <EditText
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/starsTossed"
+                android:hint="@string/total_tossed"
+                android:singleLine="true"
+                android:layout_below="@+id/starCapa"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textAlignment="center"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColorHighlight="?attr/colorPrimary"
+                android:maxLength="2"
+                android:inputType="number" />
+
+            <EditText
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/cubesTossed"
+                android:layout_below="@+id/cubeCapa"
+                android:layout_alignLeft="@+id/cubeCapa"
+                android:layout_alignStart="@+id/cubeCapa"
+                android:hint="@string/total_tossed"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColorHighlight="?attr/colorPrimary"
+                android:maxLength="2"
+                android:inputType="number" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/driveSpeed"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center"
+                android:backgroundTint="?attr/colorPrimary"
+                android:layout_below="@+id/DriveType"
+                android:layout_toRightOf="@+id/Drivetext"
+                android:layout_toEndOf="@+id/Drivetext" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/starDistance"
+                android:layout_below="@+id/starsTossed"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/starsTossed"
+                android:layout_alignEnd="@+id/starsTossed"
+                android:spinnerMode="dropdown"
+                android:textAlignment="center"
+                android:backgroundTint="?attr/colorPrimary" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cubeDistance"
+                android:layout_below="@+id/cubesTossed"
+                android:layout_alignLeft="@+id/cubesTossed"
+                android:layout_alignStart="@+id/cubesTossed"
+                android:layout_alignRight="@+id/cubesTossed"
+                android:layout_alignEnd="@+id/cubesTossed"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textAlignment="center"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drive_speed"
+                android:id="@+id/Drivetext"
+                android:textSize="20sp"
+                android:layout_below="@+id/DriveType"
+                android:layout_toRightOf="@+id/robotPicture"
+                android:layout_toEndOf="@+id/robotPicture"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hanging"
+                android:id="@+id/HangingText"
+                android:layout_marginTop="27dp"
+                android:textSize="20sp"
+                android:layout_below="@+id/starDistance"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Hanging"
+                android:layout_below="@+id/HangingText"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/starDistance"
+                android:layout_alignEnd="@+id/starDistance"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textAlignment="center"
+                android:spinnerMode="dropdown" />
+
+            <CheckBox
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="@string/autonomousHangText"
+                android:id="@+id/AutonomousHang"
+                android:textSize="17sp"
+                android:buttonTint="?attr/colorPrimary"
+                android:layout_below="@+id/HangingTime"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/AutonomousScore"
+                android:layout_alignTop="@+id/HangingText"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:hint="@string/autonomous_score"
+                android:singleLine="true"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColorHighlight="?attr/colorPrimary" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/AutonomousStars"
+                android:layout_below="@+id/AutonomousScore"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:hint="@string/star_s_in_autonomous"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColorHighlight="?attr/colorPrimary"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/AutonomousCubes"
+                android:layout_below="@+id/AutonomousStars"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:hint="@string/cube_s_in_autonomous"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColorHighlight="?attr/colorPrimary"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/HangingTime"
+                android:layout_below="@+id/AutonomousStars"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="@string/hanging_time"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColorHighlight="?attr/colorPrimary"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Comments"
+                android:layout_below="@+id/AutonomousHang"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/AutonomousCubes"
+                android:layout_alignEnd="@+id/AutonomousCubes"
+                android:hint="@string/comments"
+                android:maxLines="5"
+                android:textAlignment="center"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColorHighlight="?attr/colorPrimary" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/saveText"
+                android:id="@+id/save"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/Comments"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="center"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColorHighlight="?attr/colorPrimary"
+                android:onClick="saveClick" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

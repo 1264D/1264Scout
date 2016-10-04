@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">1264Scout</string>
+    <string name="OffensivePowerRating">Offensive Power Rating</string>
+    <string name="AutonomousPowerRating">Autonomous Power Rating</string>
+    <string name="AuxiliaryPowerRating">Auxiliary Power Rating</string>
+    <string name="OverallRating">Overall Rating</string>
+    <string name="refresh">Refresh</string>
+    <string name="action_search">Search</string>
+    <string name="CreateFile">Create File</string>
+    <string name="inputTeamName"> Team Number</string>
+    <string name="drive_type">Drive Type</string>
+    <string name="stars">Stars:</string>
+    <string name="capacity">Capacity</string>
+    <string name="drive_speed">Drive Speed:</string>
+    <string name="cubes">Cubes:</string>
+    <string name="total_tossed">Total Tossed</string>
+    <string name="hanging">Hanging:</string>
+    <string name="autonomousHangText">Hang in Autonomous?</string>
+    <string name="autonomous_score">Autonomous Score</string>
+    <string name="cube_s_in_autonomous">Cube(s) in Autonomous</string>
+    <string name="star_s_in_autonomous">Star(s) in Autonomous</string>
+    <string name="hanging_time">Hanging Time (Sec)</string>
+    <string name="comments">Comments</string>
+    <string name="saveText">Save</string>
+</resources>
